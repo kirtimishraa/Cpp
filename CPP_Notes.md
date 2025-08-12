@@ -242,4 +242,8 @@ Organization: Code is grouped into classes, which define objects with attributes
   - One major issue with structs was invariants: to enforce rules, we had to write extra functions, but it was up to the programmer to call them and the compiler couldn’t enforce it.
   - But In classes, we can hide fields (private), so they can only be modified through methods. This lets the compiler enforce our rules.
  
+ - Constant 
+    const object don;t call Non-cont member function/Method, that also needs to be const 
+    Neither the const method modify non-const dta member
+    But Const member functions/Method can modify non-members (such as local variables and function parameters) 
 
