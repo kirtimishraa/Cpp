@@ -233,9 +233,10 @@
       - while Class binds data (attributes) and functions (methods) together, which allows better data protection and code organization.
 
 ### Object: An object is simply a variable/instance of a class
+
     - Syntax: 
       ClassName objectName(args...);
-
+  
     - Object binds variables and methods together which is called as *encapsulation or data binding.*
 
     - This also hides implementation details because we use specific methods to access and modify data instead of accessing variables directly, which increases security. This is called **Data abstraction**
