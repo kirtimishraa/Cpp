@@ -44,7 +44,6 @@
     ostream: To write output, istream: To read input
         << (Insertion Operator): Used with cout for output.
         >> (Extraction Operator): Used with cin for input.
-----------------------------------------------------------------------------------------------------------------
 
 - ### Loops/Switch/Break & continue/Swiches/If statement and Recusrion (can use function overloading, default arguments, classes, etc. to make it more flexible)* 
 
