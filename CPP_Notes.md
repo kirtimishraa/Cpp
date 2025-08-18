@@ -67,9 +67,9 @@
     clog<<variable_name;    #Prints error but buffered: (temporary memory area "buffer"): Collect & Prints when buffere is full; useful for logs, diagnostics, or debug info.
 
 
-### - Namespace: 
+### Namespace: 
 
-    1. To prevent name conflicts
+    - To prevent name conflicts
         can repeat the same variable in different namspaces
 
         namespace first{
@@ -86,7 +86,7 @@
 
         }
 
-    2. - Using "namespace": TO specify which inbuilt function we're using 
+    - Using "namespace": TO specify which inbuilt function we're using 
           All the built-in standard library functions & objects (cin, cout, endl, vector, etc.) are in the std namespace; 
         - :: Is scope resulution operator(Compiler understand the command via) 
 
@@ -96,7 +96,7 @@
             cin>>variable_name;
 
 
-### - typedef: 
+### typedef: 
       We can create own Identifier/name for any data type to avoid typos and increase readability
       -Syantax: typedef std::Data_Type New_Name/identifier;
 
@@ -110,7 +110,7 @@
     -Syntax: using New_name = Data type
              using text_t = std::string;*
 
-### - Function templates: 
+### Function templates: 
     Used to write generic functions that work with any DataType; To reduce same logic/code duplicacy like add(int, int), add(float, float)
     Syntax:
     #include<iostream>
@@ -128,7 +128,7 @@
     }
 
 
-### - inline function: 
+### inline function: 
     - inline function, the compiler tries to replace the function call with the actual code of the function at compile time
     - inline is a suggestion to the compiler (not a guarantee); it mainly used for Function-like macross, small, fast, simple functions Ex: #define SQUARE(x) ((x)*(x))
     
@@ -139,7 +139,7 @@
       }     
 
 
-### - Casting:  
+### Casting:  
 
     int a = 10;
     double d=a;                 //impilicit casting; int to double
@@ -149,7 +149,7 @@
     std::cout << (char) 100;        //O/p: d; Explicit casting
 
 
-### - Ternary operator:  ?: (? After if condition; : Before else condtion)
+### Ternary operator:  ?: (? After if condition; : Before else condtion)
     - Recommended for simple/short expression else code becomes non-readable
       Ex:
       if(grade >= 60)
@@ -162,7 +162,7 @@
       - If we use ternary: 
         grade>=60 ? std:: cout << "You pass!" : std::cout<<"You fail!";
 
-## - Passing array to function
+## Passing array to function
     - Passing Array as a Pointer                //Works in Both C & C++                                  
         Syntax: returntype function_name (datatype *array_name)  
 
@@ -177,7 +177,7 @@
         void function_Name(int (&arr)[N])
     
 
-## - Function Overloading: 
+## Function Overloading: 
     - When we use same function name multiple times with different set of parameteres
     - Differetiate the function: Number of parameters, Type of parameters; 
     - What not differentiate: Return type of the function doesn't
@@ -201,7 +201,7 @@
         - O/p: Here is your Indian and Italian dishes that you ordered
 
 
-## - Dynamic Memory Allocation: 
+## Dynamic Memory Allocation: 
     -Syntax: 
         Create:
         dataType* ptr_name = new dataType;
@@ -225,14 +225,14 @@
         - Abstraction:    Hiding complex details, showing only essential features.
         - Encapsulation:  Binding data and methods together, restricting direct access.
 
-### - Class And Objects*: 
+### Class And Objects: 
     A class is a user-defined data type, like struct. but Advance of it, Whatever limitations struct had, classes fix. 
       - class has both Attributes (data) and Behaviors (functions).
       - Thinks as A Horse has Attributes/(variable) → 4 legs, color, age and Behaviors/action(function) → eating(), running(), riding() 
       - In C, a struct can hold multiple attributes (e.g., legs, age), but functions must be written separately, which makes the code complex and error-prone. while they must be binded together.
       - while Class binds data (attributes) and functions (methods) together, which allows better data protection and code organization.
 
-### - Object: An object is simply a variable/instance of a class
+### Object: An object is simply a variable/instance of a class
     - Syntax: 
       ClassName objectName(args...);
 
@@ -240,11 +240,11 @@
 
     - This also hides implementation details because we use specific methods to access and modify data instead of accessing variables directly, which increases security. This is called **Data abstraction**
 
-### - invariants
+  ### invariants
     - One major issue with structs was invariants: to enforce rules, we had to write extra functions, but it was up to the programmer to call them and the compiler couldn’t enforce it.
     - But In classes, we can hide fields (private), so they can only be modified through methods. This lets the compiler enforce our rules.
  
- ### - Constant 
+ ### Constant 
       const object don;t call Non-cont member function/Method, that also needs to be const 
       Neither the const method modify non-const dta member
       But Const member functions/Method can modify non-members (such as local variables and function parameters)
