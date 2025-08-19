@@ -51,6 +51,8 @@
         - To read string with space: std::getline(std::cin, Variable); 
           use: std::ws To ignore the whitespace error std::getline(std::cin >> std::ws, name); 
         - string function: name.insert(index_Number, "Entity_to insert"); name.clear(); mame.append("entity_to_add"); For more string function: https://cplusplus.com/reference/string/
+          - Like To take multiple input: getline
+              Syntax: std::getline(input_stream[cin/fstream], string_variable, delimiter[when to stop]);
         - in <cmath> All the maths function: max(), pow(), , abs() etc;  More math functions: https://cplusplus.com/reference/cmath/
         - fill(begin address[somply aray name], end [array name + size], value)   //Fills a range of elements with a specified value Array
 
@@ -244,6 +246,36 @@
     - One major issue with structs was invariants: to enforce rules, we had to write extra functions, but it was up to the programmer to call them and the compiler couldn’t enforce it.
     - But In classes, we can hide fields (private), so they can only be modified through methods. This lets the compiler enforce our rules.
  
+ ### Member function/Method: function that is defined inside a class
+   - Syntax inside class: 
+
+      class Class_Name {  
+      public:                              //Access specifier
+      returnType functionName(args) {  
+      // body of the function  
+      }  
+      };  
+    
+   - Outside of class: 
+
+     class Class_name 
+      {  
+        public:                               //Access Modifiers  
+        returnType function_name(parameters);  // Function declaration  
+      };  
+
+        returnType ClassName::functionName(parameters) 
+      {  
+        // body of the function  
+      }  
+
+    - member functions may be:
+      - Simple
+      - Static
+      - Constant
+      - Inline
+      - Friend
+
  ### Constant 
       const object don;t call Non-cont member function/Method, that also needs to be const 
       Neither the const method modify non-const dta member
