@@ -8,7 +8,8 @@ class Bank{
     string password;
 
 public:
-    float Deposit(){
+    float Deposit()
+    {
         cout << "Enter the amount: ";
         cin >> Money;
         cout << Money << "Amount has been credited to your account! \n";
@@ -16,10 +17,17 @@ public:
         return 0;
     }
     float Withdraw(){
-        cout<<"How much amount want to withdraw \n ";
+        if(Amount<=0)
+        {
+            cout <<"You don't have sufficient balance!";
+        }
+        else
+        {
+        cout<<"Enter the amount want to withdraw \n ";
         cin >> Money;
         Amount = Amount - Money;
         return 0;
+        }
     }
 
     float CheckBalance(){
@@ -36,16 +44,40 @@ public:
         Amount = 0; 
         cout <<"Your Account Created Successfully!";
     }
+    void DeleteAccount(){
+        Name.clear();
+        AccountNum.clear();
+        cout << "Well! Your Account has been removed.";
+    }
 };
 
 int main()
 {
     Bank Account;
+    Account.CreateAccount();
+    Account.CheckBalance();
     Account.Deposit();
     Account.Withdraw();
-    Account.CheckBalance();
-    Account.CreateAccount();
+    Account.DeleteAccount();
+    
+    cout << "Enter, C: Create Account \n B: Check Balance \n D: Deposite Money \n W: Withdraw Money \n R: Remove Account Parmanently \n X: Exit";
+    switch(choice!='X'){
+            case 'C': 
+                    Account.CreateAccount();
+                    break;
+            case 'B':
+                    Account.CheckBalance();
+                    break;
+            case 'D': 
+                    Account.Deposit();
+                    break;
+            case 'W': 
+                    Account.Withdraw();
+                    break;
+            case 'R':
+                    Account.DeleteAccount();
+                    break;
+
+    }
 
 }
-
-
